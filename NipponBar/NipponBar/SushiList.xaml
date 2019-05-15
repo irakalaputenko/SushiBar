@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="NipponBar.SushiList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NipponBar"
+             mc:Ignorable="d" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="500" Width="770">
+    <Grid>
+        <ListBox x:Name="sushisList" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Image  Width="300" Source="{Binding Path=ImagePath}"/>
+                        <StackPanel>
+                            <Label>
+                            <TextBlock x:Name="name_sushi" FontSize="45"  Height="72" Text="{Binding Path=SushiName}" HorizontalAlignment="Left" />
+                            </Label>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="320"  FontSize="16" Text="{Binding Path=Option}" HorizontalAlignment="Left" />
+                            <StackPanel Width="446">
+                                <TextBlock Foreground="Red" FontSize="35" Margin="30,0,40,0" Height="45" Text="{Binding Path=Price}" HorizontalAlignment="Left" >  UAH</TextBlock>
+                                <Button BorderBrush="#FFCD0F0F" Width="150" Background="#FFCD0F0F" DataContext="{Binding Path=Id}" HorizontalAlignment="Right" Margin="0,-45,35,0" Content="Add in Cart" Height="30" Click="Button_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

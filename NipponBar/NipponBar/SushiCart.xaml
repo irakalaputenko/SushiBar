@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="NipponBar.SushiCart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NipponBar"
+             mc:Ignorable="d" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="500" Width="770">
+    <Grid>
+        <StackPanel>
+            <ListBox x:Name="sushisCart" Height="500" Margin="0,0,276,0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5" Orientation="Horizontal">
+                            <Image  Width="150" Source="{Binding ImagePath}"/>
+                            <StackPanel>
+                                <Label>
+                                    <TextBlock x:Name="sushiName_Name" FontSize="25"  Height="72" Text="{Binding SushiName}" HorizontalAlignment="Left" />
+                                </Label>
+                                <StackPanel Width="446">
+                                    <TextBlock x:Name="summ" Foreground="Red" FontSize="35" Margin="30,0,40,0" Height="45" Text="{Binding Price}" HorizontalAlignment="Left" ></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+            <StackPanel Height="500" RenderTransformOrigin="0.5,0.5" Margin="501,-500,-4,0">
+                <Image Height="196" Margin="0,0,0,0" Source="E:\Навчання\logo.png"/>
+                <StackPanel Margin="0,0,0,0" Height="303">
+                    <Button Background="#FFCD0F0F" BorderBrush="#FFCD0F0F" Click="Summ_Click" Width="200" Margin="34,15,39,0" Content="SUMM"/>
+                    <TextBlock FontSize="35" Foreground="#FFCD0F0F" x:Name="prise" Margin="100,5,37,0" HorizontalAlignment="Center" Width="136" Height="50" materialDesign:ColorZoneAssist.Mode="Dark"></TextBlock>
+                    <Button Background="#FFCD0F0F" BorderBrush="#FFCD0F0F" Click="Button_Click" Width="200" Margin="0,15,0,0" Content="DISCOUNT"/>
+                    <Label FontSize="20" Height="50" Foreground="#FFCD0F0F" Margin="0,0,143,0">Total summ</Label>
+                    <Label x:Name="total" FontSize="20" Foreground="#FFCD0F0F"  Height="50" Margin="130,-50,37,0"/>
+                    <Button Background="#FFCD0F0F" BorderBrush="#FFCD0F0F" Click="BUY_Click" Width="200" Margin="0,15,0,0" Content="BUY"/>
+                </StackPanel>
+                
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

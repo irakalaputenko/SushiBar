@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="NipponBar.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NipponBar"
+             mc:Ignorable="d" 
+                        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="auto" Width="auto">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Image Source = "E:\Навчання\fotolia_0.png" Width="348"/>
+                <StackPanel>
+
+                    <StackPanel Margin="10">
+                        <TextBlock Text="TASTE OF JAPAN            " FontSize="30" FontFamily="Cooper Black" Foreground="Black"/>
+                        <TextBlock Text="             that you will remember" FontSize="25" FontFamily="Champagne &amp; Limousines" Foreground="#FFC00000" FontWeight="Bold" Margin="5"/>
+
+                        <TextBlock FontSize="18" Width="250" FontFamily="Champagne &amp; Limousines" Margin="5" TextWrapping="Wrap">
+                            At Nippon Sushi Bar we work to capture the elegance and simplicity
+                            inherently present in fresh fish. Dine with us and let us bring the
+                            traditional delicacies of Japan across the Pacific Ocean.
+                        </TextBlock>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

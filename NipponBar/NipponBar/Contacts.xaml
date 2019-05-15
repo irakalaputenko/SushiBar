@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="NipponBar.Contacts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NipponBar"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="500" Width="770">
+    <Grid>
+        <StackPanel Margin="0,112,383,0">
+            <Label FontSize="30" HorizontalAlignment="Center">Nippon Sushi - Southfield</Label>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">25242 Evergreen Rd</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">Southfield, MI 48075</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">phone: <Run Foreground="Red"> (248) 234-6130</Run></TextBlock>
+
+            <Label HorizontalAlignment="Center" FontSize="25" Foreground="Gray">dining hours</Label>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">monday - Friday 11a - 3p and 5p - 9p</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">saturday 2p - 10p</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">sunday closed</TextBlock>
+        </StackPanel>
+        <StackPanel Margin="387,0,0,0">
+            <Image Source="E:\Навчання\karta.png" Height="500"></Image>
+        </StackPanel>
+    </Grid>
+</UserControl>

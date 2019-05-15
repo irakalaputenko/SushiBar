@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="NipponBar.Cart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NipponBar"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="500" Width="770">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="sushisGrid">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                   
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding ImagePath}" Header="Photo" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
+                <DataGridTextColumn Binding="{Binding SushiName}" Header="Назва" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Option}" Header="Опис" Width="350"/>
+                <DataGridTextColumn Binding="{Binding Price}" Header="Ціна" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="updateButton" BorderBrush="#FFCD0F0F" Background="#FFCD0F0F"  Content="Add sushi" Click="updateButton_Click" Margin="470,0,0,0"/>
+            <Button x:Name="deleteButton" BorderBrush="#FFCD0F0F" Background="#FFCD0F0F" Content="Remove sushi" Click="deleteButton_Click" Margin="30,0,0,0" />
+        </StackPanel>
+    </Grid>
+</UserControl>
